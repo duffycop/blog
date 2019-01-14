@@ -15,12 +15,13 @@
 # in the templates via {{ site.myvariable }}.
 title: TinoUY
 email: cmartinpf@gmail.com
-#  description: > # this means to ignore newlines until "baseurl:"
+description: Un sitio sobre informatica y electronica.
+# this means to ignore newlines until "baseurl:"
 #  Write an awesome description for your new site here. You can edit this
 #  line in _config.yml. It will appear in your document head meta (for
 #  Google search results) and in your feed.xml site description.
 #baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://example.com" # the base hostname & protocol for your site
+url: "http://www.tinouy.tk" # the base hostname & protocol for your site
 
 # Social
 #githubUsername:
@@ -40,6 +41,12 @@ include: [_pages]
 exclude: [_site, CHANGELOG.md, LICENSE, README.md]
 sass:
   style: compressed
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: atom.xml
 
 algolia:
   index_name: blog
