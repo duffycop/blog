@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="t-grey">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Contacto</title>
+  <meta name="description" content="TinoUY">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700|Roboto+Mono:400,500' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/contacto/">
+  <link rel="alternate" type="application/rss+xml" title="TinoUY" href="http://localhost:4000/feed.xml">
+</head>
+
+  <body>
+    <nav class="c-navigation is-fixed">
+  <div class="c-navigation__container u-container">
+    <a class="c-navigation__item " href="/">Inicio</a>
+    <a class="c-navigation__item " href="/articulos/">Articulos</a>
+    <a class="c-navigation__item is-active" href="/contacto/">Contacto</a>
+    <a class="c-navigation__item " href="/about/">About</a>
+    <a class="c-navigation__item" href="/search/"><i class="material-icons">search</i></a>
+  </div>
+</nav>
+
+
+    <article class="c-article">
+  <header class="c-header c-article__header">
+    <div class="u-container">
+      <h1 class="c-header__title">Contacto</h1>
+    </div>
+  </header>
+
+  <div class="c-article__main">
+    <style>
+	label {
+    		display:block;
+	    	margin-top:20px;
+    		letter-spacing:2px;
+	}
+
+	/* Centre the form within the page */
+	form {
+		    margin:0 auto;
+		    width:459px;
+	}
+
+	/* Style the text boxes */
+	input, textarea {
+		    width:439px;
+		    height:27px;
+		    background:#efefef;
+		    border:1px solid #dedede;
+		    padding:10px;
+		    margin-top:3px;
+		    font-size:0.9em;
+		    color:#3a3a3a;
+		    -moz-border-radius:5px;
+		    -webkit-border-radius:5px;
+		    border-radius:5px;
+	}
+	input:focus, textarea:focus {
+	    	border:1px solid #97d6eb;
+	}
+	textarea {
+				height:213px;
+	}
+	#submit {
+    width:127px;
+    height:38px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+	}
+
+	#submit:hover {
+	    opacity:.9;
+	}
+</style>
+
+<!-- Form Started -->
+
+<form action="https://formspree.io/cmartinpf@gmail.com
+" method="POST">
+	<label>Name</label>
+ <input type="text" name="name" placeholder="Escribe aqui tu nombre">
+ <label>Email</label>
+ <input type="email" name="_replyto" placeholder="Escribe aqui tu correo">
+ <label>Message</label>
+ <textarea name="message" placeholder="Escribe aqui tu mensaje"></textarea>
+ <input class="c-btn" id="submit" type="submit" value="Send">
+</form>
+
+<!-- Form Ended -->
+
+  </div>
+</article>
+
+
+    <footer class="c-footer">
+  <div class="u-container c-footer__container">
+    <p>&copy; TinoUY 2019</p>
+    <p>
+      
+      
+      
+      
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>

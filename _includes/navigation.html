@@ -1,0 +1,9 @@
+<nav class="c-navigation {% if site.fixedNav == 'true' %}is-fixed{% endif %}">
+  <div class="c-navigation__container u-container">
+    <a class="c-navigation__item {% if page.url == '/' %}is-active{% endif %}" href="{{ "/" | prepend: site.baseurl }}">Inicio</a>
+    <a class="c-navigation__item {% if page.url == '/articulos/' %}is-active{% endif %}" href="{{ "/articulos/" | prepend: site.baseurl }}">Articulos</a>
+    <a class="c-navigation__item {% if page.url == '/contacto/' %}is-active{% endif %}" href="{{ "/contacto/" | prepend: site.baseurl }}">Contacto</a>
+    <a class="c-navigation__item {% if page.url == '/about/' %}is-active{% endif %}" href="{{ "/about/" | prepend: site.baseurl }}">About</a>
+    <a class="c-navigation__item" href="{{ "/search/" | prepend: site.baseurl }}"><i class="material-icons">search</i></a>
+  </div>
+</nav>

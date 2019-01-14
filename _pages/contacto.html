@@ -1,0 +1,65 @@
+---
+layout: page
+title: Contacto
+permalink: /contacto/
+---
+<style>
+	label {
+    		display:block;
+	    	margin-top:20px;
+    		letter-spacing:2px;
+	}
+
+	/* Centre the form within the page */
+	form {
+		    margin:0 auto;
+		    width:459px;
+	}
+
+	/* Style the text boxes */
+	input, textarea {
+		    width:439px;
+		    height:27px;
+		    background:#efefef;
+		    border:1px solid #dedede;
+		    padding:10px;
+		    margin-top:3px;
+		    font-size:0.9em;
+		    color:#3a3a3a;
+		    -moz-border-radius:5px;
+		    -webkit-border-radius:5px;
+		    border-radius:5px;
+	}
+	input:focus, textarea:focus {
+	    	border:1px solid #97d6eb;
+	}
+	textarea {
+				height:213px;
+	}
+	#submit {
+    width:127px;
+    height:38px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+	}
+
+	#submit:hover {
+	    opacity:.9;
+	}
+</style>
+
+<!-- Form Started -->
+
+<form action="https://formspree.io/cmartinpf@gmail.com
+" method="POST">
+	<label>Name</label>
+ <input type="text" name="name" placeholder="Escribe aqui tu nombre">
+ <label>Email</label>
+ <input type="email" name="_replyto" placeholder="Escribe aqui tu correo">
+ <label>Message</label>
+ <textarea name="message" placeholder="Escribe aqui tu mensaje"></textarea>
+ <input class="c-btn" id="submit" type="submit" value="Send">
+</form>
+
+<!-- Form Ended -->

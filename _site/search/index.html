@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="t-grey">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Search</title>
+  <meta name="description" content="TinoUY">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700|Roboto+Mono:400,500' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/search/">
+  <link rel="alternate" type="application/rss+xml" title="TinoUY" href="http://localhost:4000/feed.xml">
+</head>
+
+  <body>
+    <nav class="c-navigation is-fixed">
+  <div class="c-navigation__container u-container">
+    <a class="c-navigation__item " href="/">Inicio</a>
+    <a class="c-navigation__item " href="/articulos/">Articulos</a>
+    <a class="c-navigation__item " href="/contacto/">Contacto</a>
+    <a class="c-navigation__item " href="/about/">About</a>
+    <a class="c-navigation__item" href="/search/"><i class="material-icons">search</i></a>
+  </div>
+</nav>
+
+
+    <article class="c-article">
+  <header class="c-header c-article__header">
+    <div class="u-container">
+      <h1 class="c-header__title">Search</h1>
+    </div>
+  </header>
+
+  <div class="c-article__main">
+    <div id="search-searchbar"></div>
+
+  <div class="post-list" id="search-hits">
+    
+      <div class="post-item">
+        
+        <span class="post-meta">Jan 19, 2018</span>
+
+        <h2>
+          <a class="post-link" href="/2018/01/Instalando-DRBD">
+            Instalando DRBD
+          </a>
+        </h2>
+
+        <div class="post-snippet"><p>Bienvenidos aventureros.
+En este post vamos a aprender a instalar DRBD. <!-- more -->.
+En cada nodo tendremos un disco vacio y completamente dedicado a DRBD, por lo tanto usaremos este disco /dev/vda</p>
+
+</div>
+      </div>
+    
+      <div class="post-item">
+        
+        <span class="post-meta">Jan 3, 2018</span>
+
+        <h2>
+          <a class="post-link" href="/2018/01/primer-post">
+            Hola Mundo!
+          </a>
+        </h2>
+
+        <div class="post-snippet"><p>Hola mundo! Este es mi blog con Jekyll, ahora no hay más excusas para no tener un blog o documentación!</p>
+</div>
+      </div>
+    
+  </div>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+
+
+function epochToJsDate(ts){
+  var d = new Date(ts*1000);
+  var n = d.toDateString()
+  return n;
+}
+
+const search = instantsearch({
+  appId: 'Z1MEP1W19K',
+  apiKey: '76c1a415cbb8523bc01cf846aa546c22',
+  indexName: 'blog',
+  searchParameters: {
+    facetsRefinements: {
+      type: ['post']
+    }
+  }
+});
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '#search-searchbar',
+    placeholder: 'Search into posts...',
+    poweredBy: true // This is required if you're on the free Community plan
+  })
+);
+
+
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '#search-hits',
+    templates: {
+      item: function(hit) {
+        fecha = epochToJsDate(hit.date);
+        return `
+          <div class="post-item">
+            <strong><h1><a class="post-link" href="${hit.url}">${hit.title}</a></h1></strong>
+            <em class="post-meta">${fecha}</em>
+            <div class="post-snippet">${hit.html}</div>
+          </div>
+        `;
+      }
+    }
+  })
+);
+
+search.start();
+</script>
+
+
+  </div>
+</article>
+
+
+    <footer class="c-footer">
+  <div class="u-container c-footer__container">
+    <p>&copy; TinoUY 2019</p>
+    <p>
+      
+      
+      
+      
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>

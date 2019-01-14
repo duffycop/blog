@@ -1,0 +1,54 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+
+
+function epochToJsDate(ts){
+  var d = new Date(ts*1000);
+  var n = d.toDateString()
+  return n;
+}
+
+const search = instantsearch({
+  appId: '{{ site.algolia.application_id }}',
+  apiKey: '{{ site.algolia.search_only_api_key }}',
+  indexName: '{{ site.algolia.index_name }}',
+  searchParameters: {
+    facetsRefinements: {
+      type: ['post']
+    }
+  }
+});
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '#search-searchbar',
+    placeholder: 'Search into posts...',
+    poweredBy: true // This is required if you're on the free Community plan
+  })
+);
+
+
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '#search-hits',
+    templates: {
+      item: function(hit) {
+        fecha = epochToJsDate(hit.date);
+        return `
+          <div class="post-item">
+            <strong><h1><a class="post-link" href="{{ site.baseurl }}${hit.url}">${hit.title}</a></h1></strong>
+            <em class="post-meta">${fecha}</em>
+            <div class="post-snippet">${hit.html}</div>
+          </div>
+        `;
+      }
+    }
+  })
+);
+
+search.start();
+</script>
