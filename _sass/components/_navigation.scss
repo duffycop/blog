@@ -56,6 +56,9 @@
   &.is-active:after {
     background: $c__white;
   }
+  &.search{
+	  float: right;
+  }
   &:last-child{
 	  float: right;
   }
