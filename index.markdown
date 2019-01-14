@@ -13,14 +13,14 @@ title: TinoUY
       {% else %}
         {{ post.excerpt | strip_html | truncatewords: 15 }}
       {% endif %}
-    <p class="post-meta">Posted by
+    <p class="post-meta"><small>Posted by
       {% if post.author %}
         {{ post.author }}
       {% else %}
         {{ site.author }}
       {% endif %}
       on
-      {{ post.date | date: '%B %d, %Y' }}</p>
+      {{ post.date | date: '%B %d, %Y' }}</small></p>
   </article>
 
   <hr>
