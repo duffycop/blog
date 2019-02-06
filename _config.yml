@@ -21,7 +21,7 @@ description: Un sitio sobre informatica y electronica.
 #  line in _config.yml. It will appear in your document head meta (for
 #  Google search results) and in your feed.xml site description.
 #baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.tinouy.tk" # the base hostname & protocol for your site
+url: "http://www.tinouy.com" # the base hostname & protocol for your site
 
 # Social
 #githubUsername:
