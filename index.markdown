@@ -11,7 +11,7 @@ title: TinoUY
       {% if post.subtitle %}
         <h3 class="post-subtitle">{{ post.subtitle }}</h3>
       {% else %}
-        {{ post.content | markdownify }} <!--strip_html | truncatewords: 35 }}-->
+        {{ post.content | strip_html | truncatewords: 35 }}
       {% endif %}
     <p class="post-meta"><small>Posted by
       {% if post.author %}
