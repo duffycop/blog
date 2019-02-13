@@ -1,0 +1,1 @@
+window.TEXT_SEARCH_DATA={'posts':[{'title':'Hola+Mundo%21','url':'%2F2018%2F01%2F03%2Fhola-mundo.html'},{'title':'Instalando+DRBD','url':'%2F2018%2F01%2F19%2FInstalando-DRBD.html'},{'title':'Instalando+FreeIPA','url':'%2F2019%2F02%2F08%2FFree-IPA.html'}]};

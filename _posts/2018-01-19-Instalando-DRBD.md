@@ -1,12 +1,7 @@
 ---
-layout: post
 title:  Instalando DRBD
-date:   2018-01-19
-categories: [DRBD, Tutoriales]
-tags: [DRBD, Tutoriales]
-comments: true
+key: 20180109
 author: Tino
-paginate: true
 ---
 
 Bienvenidos aventureros.
@@ -18,8 +13,6 @@ En cada nodo tendremos un disco vacio y completamente dedicado a DRBD, por lo ta
 DRBD es un software que permite hacer replica de los datos de una particion o disco entre varias maquinas a traves de la red.
 
 ### Entorno
--------------
-
 > Nodo1 | drbd1 | 192.168.10.10 | CentOS 7
 >
 > Nodo2 | drbd2 | 192.168.10.11 | CentOS 7

@@ -1,11 +1,37 @@
-<footer class="c-footer">
-  <div class="u-container c-footer__container">
-    <p>&copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
-    <p>
-      {% if site.twitterUsername %}<a href="https://twitter.com/{{ site.twitterUsername }}">Twitter</a>{% endif %}
-      {% if site.githubUsername %}<a href="https://github.com/{{ site.githubUsername }}">Github</a>{% endif %}
-      {% if site.dribbbleUsername %}<a href="https://dribbble.com/{{ site.dribbbleUsername }}">Dribbble</a>{% endif %}
-      {% if site.codepenUsername %}<a href="http://codepen.io/{{ site.codepenUsername }}">CodePen</a>{% endif %}
-    </p>
+
+<footer class="footer py-4 js-page-footer">
+  <div class="main">
+
+    {%- assign _site_author = site.author -%}
+    {%- if _site_author.type == 'organization' -%}
+      {%- assign _site_author_itemtype = 'http://schema.org/Organization' -%}
+    {%- else -%}
+      {%- assign _site_author_itemtype = 'http://schema.org/Person' -%}
+    {%- endif -%}
+
+    <div itemscope itemtype="{{ _site_author_itemtype }}">
+      <meta itemprop="name" content="{{ _site_author.name }}">
+      {%- assign _site_author_url = _site_author.url | default: '/'-%}
+      {%- include snippets/get-nav-url.html path=_site_author_url -%}
+      {%- assign _site_author_url = __return -%}
+      <meta itemprop="url" content="{{ _site_author_url }}">
+      {%- if _site_author.bio -%}
+        <meta itemprop="description" content="{{ _site_author.bio }}">
+      {%- endif -%}
+      <div class="footer__author-links">
+        {%- include author-links.html author=_site_author -%}
+      </div>
+    </div>
+    {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
+    {%- assign _locale_copyright_dates = __return -%}
+    <div class="site-info mt-2">
+      <div>
+        {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
+        {%- assign _locale_copyright_dates = __return -%}
+        © {{ site.title }} {{ _locale_copyright_dates }},
+        Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
+        title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
+      </div>
+    </div>
   </div>
 </footer>
