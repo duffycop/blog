@@ -6,8 +6,14 @@ author: Tino
 
 ### Que es FreeIPA (Free Identity Policy Audit)?
 
-Es un proyecto de suite de software de código fuente libre mantenida por el Proyecto Fedora, patrocinada por RedHat, el nombre significa Identidad Políticas Auditoría Libre (en inglés, Free Identity Policy Audit), tiene por objetivo proveer un interfaz segura y sencilla para la administración de identidades comparable a Novell Identity Manager, IBM Security Directory Suite, Redhat 389 Directory Server, Apache Directory Studio y Microsoft Active Directory.<!-- more -->  
+Es un proyecto de suite de software de código fuente libre mantenida por el Proyecto Fedora, patrocinada por RedHat, el nombre significa Identidad Políticas Auditoría Libre (en inglés, Free Identity Policy Audit), tiene por objetivo proveer un interfaz segura y sencilla para la administración de identidades comparable a Novell Identity Manager, IBM Security Directory Suite, Redhat 389 Directory Server, Apache Directory Studio y Microsoft Active Directory.<!-- more --> [Wikipedia](https://es.wikipedia.org/wiki/FreeIPA)  
 
+#### Para que queremos un FreeIPA?  
+
+El FreeIPA nos sirve para manejar los usuarios de nuestra red de forma centralizada.
+Seguramente habrás escuchado en algún momento de Active Directory o LDAP o Dominio a nivel de redes empresariales.
+Pues lo que sucede es sencillo, en una red hogareña con dos o tres equipos es fácil administrar usuarios y permisos individuales en cada equipo ya que es una cantidad reducida, pero en una red con 50 equipos manejar usuarios y permisos equipo por equipo ya se vuelve algo tedioso, para esto se configura un servidor de Directorio Activo, se manejan todos los usuarios y grupos de forma centralizada en nuestro server de LDAP, Active Directory o FreeIPA. De esta forma agregar un usuario que puedan autenticarse en cualquier equipo, o darle permisos a un usuario para conectarse a determinado recurso compartido o impresora es mucho mas sencillo y puede hacerse desde un equipo y para toda la red.
+Ademas podemos conectar otros tipos de servicios para que se autentiquen contra nuestro FreeIPA y que solo usuarios de nuestro dominio puedan acceder a estos servicios, pero esto ya lo veremos más adelante.   
 
 ### Que necesitamos?
 
