@@ -1334,10 +1334,10 @@ a > .item__header.disabled, a > .item__header:disabled, a.item__header.disabled,
 .site-tags .tag-button svg path, .site-tags .tag-button:link svg path, .site-tags .tag-button:visited svg path { fill: rgba(255, 255, 255, 0.8); }
 .root[data-is-touch="false"] .site-tags .tag-button:hover { color: rgba(255, 255, 255, 0.8); background-color: #4e4e4e; }
 .root[data-is-touch="false"] .site-tags .tag-button:hover svg path { fill: rgba(255, 255, 255, 0.8); }
-.root[data-is-touch] .site-tags .tag-button.active, .root[data-is-touch] .site-tags .tag-button:active { color: rgba(255, 255, 255, 0.8); background-color: #ff006a; }
+.root[data-is-touch] .site-tags .tag-button.active, .root[data-is-touch] .site-tags .tag-button:active { color: rgba(255, 255, 255, 0.8); background-color: #777777; }
 .root[data-is-touch] .site-tags .tag-button.active svg path, .root[data-is-touch] .site-tags .tag-button:active svg path { fill: rgba(255, 255, 255, 0.8); }
-.root[data-is-touch] .site-tags .tag-button.focus { color: rgba(255, 255, 255, 0.8); background-color: #ff006a; box-shadow: 0 0 0 2px rgba(255, 0, 106, 0.4); }
-.root[data-is-touch] .site-tags .tag-button.focus svg path { fill: rgba(255, 255, 255, 0.8); }
+.root[data-is-touch] .site-tags .tag-button.focus { color: default; background-color: #4e4e4e; box-shadow: 0 0 0 2px rgba(78, 78, 78, 0.4); }
+.root[data-is-touch] .site-tags .tag-button.focus svg path { fill: default; }
 .site-tags .tag-button.disabled, .site-tags .tag-button:disabled { color: rgba(255, 255, 255, 0.4) !important; background-color: #202020 !important; }
 .site-tags .tag-button.disabled svg path, .site-tags .tag-button:disabled svg path { fill: rgba(255, 255, 255, 0.4) !important; }
 .site-tags .tag-button > .tag-button__count { display: inline-block; margin-left: 0.25rem; font-size: 0.7rem; line-height: 1; vertical-align: top; }
