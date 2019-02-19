@@ -279,7 +279,7 @@
 	c3-3,2.3-5.2-2.1-6.3S7,1.8,7.7,4.6C7,1.8,5,2.1,1.7,5.3C7.3,11,7.3,16.7,1.7,22.3"/>
 </svg><a title="Un sitio sobre sysadmins y tecnologia
 " href="/">TinoUY</a></div><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></div><nav class="navigation">
-        <ul><li class="navigation__item"><a href="/archive.html">Archive</a></li><li class="navigation__item navigation__item--active"><a href="/about.html">About</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
+        <ul><li class="navigation__item"><a href="/archive.html">Archive</a></li><li class="navigation__item navigation__item--active"><a href="/about.html">About</a></li><li class="navigation__item"><a href="/contact.html">Contact</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
       </nav></div>
   </header>
 </div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
@@ -288,9 +288,7 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
-<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>About</h1></header></div><meta itemprop="headline" content="About"><meta itemprop="author" content="Tino"/><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
-
-<!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><p>Que tal internauta?</p>
+<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/WebPage"><div class="article__header"><header><h1>About</h1></header></div><meta itemprop="headline" content="About"><meta itemprop="author" content="Tino"/><div class="js-article-content"><p>Que tal internauta?</p>
 
 <p>Este es mi blog, mi casita en internet. Aquí publico cosas que me causan curiosidad y/o documentación que me parece interesante o importante.
 Si tienes algún comentario o tema que pueda interesarme contactame a través del Disqus e investigare sobre ello!</p>
@@ -298,37 +296,6 @@ Si tienes algún comentario o tema que pueda interesarme contactame a través de
 <p>Sin mas disfruta del blog!</p>
 
 <p>Saludos!</p>
-</div><div class="d-print-none"><footer class="article__footer"><!-- start custom article footer snippet -->
-
-<!-- end custom article footer snippet --></footer></div>
-
-</div>
-
-<script>(function() {
-  var SOURCES = window.TEXT_VARIABLES.sources;
-  window.Lazyload.js(SOURCES.jquery, function() {
-    $(function() {
-      var $this ,$scroll;
-      var $articleContent = $('.js-article-content');
-      var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
-      var scroll = hasSidebar ? '.js-page-main' : 'html, body';
-      $scroll = $(scroll);
-
-      $articleContent.find('.highlight').each(function() {
-        $this = $(this);
-        $this.attr('data-lang', $this.find('code').attr('data-lang'));
-      });
-      $articleContent.find('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
-        $this = $(this);
-        $this.append($('<a class="anchor d-print-none" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
-      });
-      $articleContent.on('click', '.anchor', function() {
-        $scroll.scrollToAnchor('#' + $(this).parent().attr('id'), 400);
-      });
-    });
-  });
-})();
-</script>
 </div><section class="page__comments d-print-none"><div id="disqus_thread"></div>
   <script>
   /**
