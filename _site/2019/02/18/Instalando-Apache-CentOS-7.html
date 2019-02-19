@@ -1,10 +1,10 @@
 <!DOCTYPE html><html lang="en">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Instalando FreeIPA - TinoUY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>Instalando Apache en CentOS 7 - TinoUY</title>
 
-<meta name="description" content="Que es FreeIPA (Free Identity Policy Audit)?Es un proyecto de suite de software de código fuente libre mantenida por el Proyecto Fedora, patrocinada por RedH...">
-<link rel="canonical" href="http://localhost:4000/2019/02/08/Instalando-Free-IPA.html"><link rel="alternate" type="application/rss+xml" title="TinoUY" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="description" content="Hey! Me alegra verte de nuevo por aquí!Hoy vamos a ver la instalación de Apache Web Server en un CentOS 7.Que es Apache?El servidor HTTP Apache es un servido...">
+<link rel="canonical" href="http://localhost:4000/2019/02/18/Instalando-Apache-CentOS-7.html"><link rel="alternate" type="application/rss+xml" title="TinoUY" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -287,126 +287,67 @@
 
               <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
-<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Instalando FreeIPA</h1></header></div><meta itemprop="headline" content="Instalando FreeIPA"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>Tino</span></li><li><i class="far fa-calendar-alt"></i> <span>Feb 08, 2019</span>
-            </li></ul></div><meta itemprop="author" content="Tino"/><meta itemprop="datePublished" content="2019-02-08T00:00:00-03:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+<!-- end custom main top snippet --><article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>Instalando Apache en CentOS 7</h1></header></div><meta itemprop="headline" content="Instalando Apache en CentOS 7"><div class="article__info clearfix"><ul class="right-col menu"><li><i class="fas fa-user"></i> <span>Tino</span></li><li><i class="far fa-calendar-alt"></i> <span>Feb 18, 2019</span>
+            </li></ul></div><meta itemprop="author" content="Tino"/><meta itemprop="datePublished" content="2019-02-18T00:00:00-03:00"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
-<!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><h3 id="que-es-freeipa-free-identity-policy-audit">Que es FreeIPA (Free Identity Policy Audit)?</h3>
+<!-- end custom article top snippet --><div class="article__content" itemprop="articleBody"><p>Hey! Me alegra verte de nuevo por aquí!
+Hoy vamos a ver la instalación de Apache Web Server en un CentOS 7.</p>
 
-<p>Es un proyecto de suite de software de código fuente libre mantenida por el Proyecto Fedora, patrocinada por RedHat, el nombre significa Identidad Políticas Auditoría Libre (en inglés, Free Identity Policy Audit), tiene por objetivo proveer un interfaz segura y sencilla para la administración de identidades comparable a Novell Identity Manager, IBM Security Directory Suite, Redhat 389 Directory Server, Apache Directory Studio y Microsoft Active Directory.<!-- more --> <a href="https://es.wikipedia.org/wiki/FreeIPA">Wikipedia</a></p>
-
-<h4 id="para-que-queremos-un-freeipa">Para que queremos un FreeIPA?</h4>
-
-<p>El FreeIPA nos sirve para manejar los usuarios de nuestra red de forma centralizada.
-Seguramente habrás escuchado en algún momento de Active Directory o LDAP o Dominio a nivel de redes empresariales.
-Pues lo que sucede es sencillo, en una red hogareña con dos o tres equipos es fácil administrar usuarios y permisos individuales en cada equipo ya que es una cantidad reducida, pero en una red con 50 equipos manejar usuarios y permisos equipo por equipo ya se vuelve algo tedioso, para esto se configura un servidor de Directorio Activo, se manejan todos los usuarios y grupos de forma centralizada en nuestro server de LDAP, Active Directory o FreeIPA. De esta forma agregar un usuario que puedan autenticarse en cualquier equipo, o darle permisos a un usuario para conectarse a determinado recurso compartido o impresora es mucho mas sencillo y puede hacerse desde un equipo y para toda la red.
-Ademas podemos conectar otros tipos de servicios para que se autentiquen contra nuestro FreeIPA y que solo usuarios de nuestro dominio puedan acceder a estos servicios, pero esto ya lo veremos más adelante.</p>
+<h3 id="que-es-apache">Que es Apache?</h3>
+<p>El servidor HTTP Apache es un servidor web HTTP de código abierto, para plataformas Unix, Microsoft Windows, Macintosh y otras, que implementa el protocolo HTTP/1.1 y la noción de sitio virtual según la normativa RFC 2616. <a href="https://es.wikipedia.org/wiki/Servidor_HTTP_Apache">Wikipedia</a> <!-- more --></p>
 
 <h3 id="que-necesitamos">Que necesitamos?</h3>
 
-<p>Necesitamos un equipo con CentOS 7 en este caso sera virtualizado y la tarjeta de red estará en modo NAT.</p>
+<p>Un equipo con CentOS instalado y conexión a internet.</p>
 
-<blockquote>
-  <p>Ethernet: ens33<br />
-IP: 172.16.121.136<br />
-Hostname: ipa.tino.uy</p>
-</blockquote>
+<h3 id="updates">Updates</h3>
 
-<h3 id="configuración-previa">Configuración previa</h3>
 <ol>
-  <li>Para esto vamos a configurar el CentOS 7, nos conectamos por ssh
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh root@172.16.121.136
+  <li>Lo primero es comprobar que nuestro equipo esta up-to-date.
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum update
+</code></pre></div>    </div>
+    <p>Una vez actualizado todo procedemos a instalar.</p>
+  </li>
+</ol>
+
+<h3 id="instalando-apache">Instalando Apache</h3>
+
+<ol>
+  <li>Ahora ejecutamos el comando de instalación de apache.
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install httpd
 </code></pre></div>    </div>
   </li>
-  <li>Y borramos el contenido del archivo <em>/etc/hostname</em> y colocamos el nombre fqdn que querramos para nuestro LDAP
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ipa.tino.uy
+  <li>Nos preguntara si queremos instalar httpd y sus dependencias
+    <pre><code class="language-code">Tamaño total de la descarga: 3.0 M
+Tamaño instalado: 10 M
+Is this ok [y/d/N]: y
+</code></pre>
+    <p>Esto comenzara con la instalación de Apache y la salida deberá ser similar a esto.</p>
+    <pre><code class="language-code">apr-util.x86_64 0:1.5.2-6.el7
+httpd-tools.x86_64 0:2.4.6-88.el7.centos
+mailcap.noarch 0:2.1.41-2.el7
+¡Listo!
+</code></pre>
+  </li>
+  <li>Iniciamos el servicio
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl start httpd
+</code></pre></div>    </div>
+    <p>Debemos recordar que el daemon de Apache en las distribuciones RHEL como Fedora/CentOS/Red Hat se llama httpd y no apache2 como en las distros Debian como Debian/Ubuntu/Canaima.
+Si queremos que Apache se inicie con el sistema debemos habilitar el daemon.</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl enable httpd
 </code></pre></div>    </div>
   </li>
-  <li>Luego editamos el archivo <em>/etc/hosts/</em>, lo mismo que antes
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>172.16.121.136 ipa.tino.uy ipa.tino.uy ipa
-</code></pre></div>    </div>
-  </li>
-  <li>Configuración de firewall
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>firewall-cmd --permanent --add-port={80/tcp,443/tcp,389/tcp,636/tcp,88/tcp,464/tcp,53/tcp,88/udp,464/udp,53/udp,123/udp}
+  <li>Y no menos importante, habilitar el puerto 80 en el firewall, para esto haremos lo siguiente:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>firewall-cmd --zone=public --permanent --add-port=80/tcp
 firewall-cmd --reload
 </code></pre></div>    </div>
   </li>
-  <li>Luego reiniciamos el centos con <em>reboot</em> y volvemos a conectarnos por ssh (ver paso 1)</li>
 </ol>
 
-<h3 id="configurando-el-generador-de-números-aleatorios">Configurando el Generador de Números Aleatorios</h3>
+<p>Y voilá tenemos Apache instalado, ahora si queremos agregar sitios web, usarlo como reverse proxy u otras cosas debemos configurarlo correctamente.</p>
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2019-02-18T00:00:00-03:00"><!-- start custom article footer snippet -->
 
-<p>Configurar un FreeIPA requiere de un montón de datos aleatorios para las operaciones criptográficas que corre. Por defecto una maquina virtual se queda sin datos aleatorios o entropía muy rápidamente. Para solucionar esto usaremos <strong><em>rngd</em></strong>, un software generador de números aleatorios.</p>
-
-<ol>
-  <li>Debemos instalar <strong><em>rngd</em></strong>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install rng-tools
-systemctl start rngd
-systemctl enable rngd
-systemctl status rngd
-</code></pre></div>    </div>
-    <p>La salida debe incluir active (running) en verde.</p>
-  </li>
-</ol>
-
-<h3 id="instalando-freeipa">Instalando FreeIPA</h3>
-
-<ol>
-  <li>Ahora si, instalamos el paquete ipa-server.
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yum install ipa-server
-</code></pre></div>    </div>
-  </li>
-  <li>Ejecutar el comando de instalación.
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ipa-server-install
-</code></pre></div>    </div>
-  </li>
-  <li>Prompt de la instalación.
-    <pre><code class="language-code">Do you want to configure integrated DNS (BIND)? [no]: no  
-Server host name [ipa.tino.uy]: ipa.tino.uy  
-Please confirm the domain name [tino.uy]: ipa.tino.uy  
-Please provide a realm name [IPA.TINO.UY]: ipa.tino.uy  
-Directory Manager password:  
-IPA admin password:  
-Continue to configure the system with these values? [no]: yes  
-</code></pre>
-    <p>El proceso de instalación llevará unos minutos.</p>
-  </li>
-</ol>
-
-<h3 id="verificar-las-funciones-de-freeipa">Verificar las funciones de FreeIPA</h3>
-
-<ol>
-  <li>Primero debemos verificar que el dominio de Kerberos fue instalado correctamente intentando inicializar el token de Kerberos para el usuario admin.
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kinit admin
-</code></pre></div>    </div>
-    <p>Si funciona correctamente entonces debería pedirte la contraseña de admin de FreeIPA que escribimos hace unos minutos.</p>
-  </li>
-  <li>Verificar que el servidor IPA funciona adecuadamente.
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ipa user-find admin
-</code></pre></div>    </div>
-    <p>La salida de este comando debería ser la siguiente.</p>
-    <pre><code class="language-code">---------------------
-1 usuario coincidente
----------------------
-  Ingreso de usuario: admin
-  Apellido: Administrator
-  Directorio principal: /home/admin
-  Shell de ingreso: /bin/bash
-  Principal alias: admin@IPA.TINO.UY
-  UID: 836200000
-  GID: 836200000
-  Cuenta inhabilitada : False
---------------------------------
-Cantidad de entradas devueltas 1
---------------------------------
-</code></pre>
-    <p>También tendremos acceso a una interfaz web en https://ipa.tino.uy</p>
-  </li>
-</ol>
-
-<p>Y voilá, tenemos FreeIPA instalado y listo para usar.</p>
-</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2019-02-08T00:00:00-03:00"><!-- start custom article footer snippet -->
-
-<!-- end custom article footer snippet --><div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div></div><div class="article__license"></div></footer><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2018/01/19/Instalando-DRBD.html">Instalando DRBD</a></div><div class="next"><span>NEXT</span><a href="/2019/02/14/Free-IPA-Crear-grupo-read-only.html">FreeIPA - Crear grupo Read-only</a></div></div></div>
+<!-- end custom article footer snippet --><div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">Subscribe</a></div></div><div class="article__license"></div></footer><div class="article__section-navigator clearfix"><div class="previous"><span>PREVIOUS</span><a href="/2019/02/14/Free-IPA-Crear-grupo-read-only.html">FreeIPA - Crear grupo Read-only</a></div></div></div>
 
 </div>
 
@@ -441,8 +382,8 @@ Cantidad de entradas devueltas 1
   *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
   *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
   var disqus_config = function () {
-    this.page.url = 'http://localhost:4000/2019/02/08/Instalando-Free-IPA.html';
-    this.page.identifier = '20190208';
+    this.page.url = 'http://localhost:4000/2019/02/18/Instalando-Apache-CentOS-7.html';
+    this.page.identifier = '20190218';
   };
   (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');

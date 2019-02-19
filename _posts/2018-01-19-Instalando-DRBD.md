@@ -1,6 +1,6 @@
 ---
 title:  Instalando DRBD
-key: 20180109
+key: 20180119
 author: Tino
 ---
 

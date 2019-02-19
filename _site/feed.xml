@@ -1,5 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-15T14:56:16-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">TinoUY</title><subtitle>Un sitio sobre sysadmins y tecnologia
-</subtitle><author><name>Tino</name></author><entry><title type="html">FreeIPA - Crear grupo Read-only</title><link href="http://localhost:4000/2019/02/14/Free-IPA-Crear-grupo-read-only.html" rel="alternate" type="text/html" title="FreeIPA - Crear grupo Read-only" /><published>2019-02-14T00:00:00-03:00</published><updated>2019-02-14T00:00:00-03:00</updated><id>http://localhost:4000/2019/02/14/Free-IPA-Crear-grupo-read-only</id><content type="html" xml:base="http://localhost:4000/2019/02/14/Free-IPA-Crear-grupo-read-only.html">&lt;h3 id=&quot;para-que-queremos-un-grupo-de-read-only&quot;&gt;Para que queremos un grupo de Read-only?&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-19T12:49:32-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">TinoUY</title><subtitle>Un sitio sobre sysadmins y tecnologia
+</subtitle><author><name>Tino</name></author><entry><title type="html">Instalando Apache en CentOS 7</title><link href="http://localhost:4000/2019/02/18/Instalando-Apache-CentOS-7.html" rel="alternate" type="text/html" title="Instalando Apache en CentOS 7" /><published>2019-02-18T00:00:00-03:00</published><updated>2019-02-18T00:00:00-03:00</updated><id>http://localhost:4000/2019/02/18/Instalando-Apache-CentOS-7</id><content type="html" xml:base="http://localhost:4000/2019/02/18/Instalando-Apache-CentOS-7.html">&lt;p&gt;Hey! Me alegra verte de nuevo por aquí!
+Hoy vamos a ver la instalación de Apache Web Server en un CentOS 7.&lt;/p&gt;
+
+&lt;h3 id=&quot;que-es-apache&quot;&gt;Que es Apache?&lt;/h3&gt;
+&lt;p&gt;El servidor HTTP Apache es un servidor web HTTP de código abierto, para plataformas Unix, Microsoft Windows, Macintosh y otras, que implementa el protocolo HTTP/1.1 y la noción de sitio virtual según la normativa RFC 2616. &lt;a href=&quot;https://es.wikipedia.org/wiki/Servidor_HTTP_Apache&quot;&gt;Wikipedia&lt;/a&gt; &lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;que-necesitamos&quot;&gt;Que necesitamos?&lt;/h3&gt;
+
+&lt;p&gt;Un equipo con CentOS instalado y conexión a internet.&lt;/p&gt;
+
+&lt;h3 id=&quot;updates&quot;&gt;Updates&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Lo primero es comprobar que nuestro equipo esta up-to-date.
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yum update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Una vez actualizado todo procedemos a instalar.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;instalando-apache&quot;&gt;Instalando Apache&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Ahora ejecutamos el comando de instalación de apache.
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;yum install httpd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Nos preguntara si queremos instalar httpd y sus dependencias
+    &lt;pre&gt;&lt;code class=&quot;language-code&quot;&gt;Tamaño total de la descarga: 3.0 M
+Tamaño instalado: 10 M
+Is this ok [y/d/N]: y
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;Esto comenzara con la instalación de Apache y la salida deberá ser similar a esto.&lt;/p&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-code&quot;&gt;apr-util.x86_64 0:1.5.2-6.el7
+httpd-tools.x86_64 0:2.4.6-88.el7.centos
+mailcap.noarch 0:2.1.41-2.el7
+¡Listo!
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Iniciamos el servicio
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;systemctl start httpd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Debemos recordar que el daemon de Apache en las distribuciones RHEL como Fedora/CentOS/Red Hat se llama httpd y no apache2 como en las distros Debian como Debian/Ubuntu/Canaima.
+Si queremos que Apache se inicie con el sistema debemos habilitar el daemon.&lt;/p&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;systemctl enable httpd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Y no menos importante, habilitar el puerto 80 en el firewall, para esto haremos lo siguiente:
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;firewall-cmd --zone=public --permanent --add-port=80/tcp
+firewall-cmd --reload
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Y voilá tenemos Apache instalado, ahora si queremos agregar sitios web, usarlo como reverse proxy u otras cosas debemos configurarlo correctamente.&lt;/p&gt;</content><author><name>Tino</name><email>cmartinpf@gmail.com</email></author><summary type="html">Hey! Me alegra verte de nuevo por aquí! Hoy vamos a ver la instalación de Apache Web Server en un CentOS 7. Que es Apache? El servidor HTTP Apache es un servidor web HTTP de código abierto, para plataformas Unix, Microsoft Windows, Macintosh y otras, que implementa el protocolo HTTP/1.1 y la noción de sitio virtual según la normativa RFC 2616. Wikipedia Que necesitamos? Un equipo con CentOS instalado y conexión a internet. Updates Lo primero es comprobar que nuestro equipo esta up-to-date. yum update Una vez actualizado todo procedemos a instalar. Instalando Apache Ahora ejecutamos el comando de instalación de apache. yum install httpd Nos preguntara si queremos instalar httpd y sus dependencias Tamaño total de la descarga: 3.0 M Tamaño instalado: 10 M Is this ok [y/d/N]: y Esto comenzara con la instalación de Apache y la salida deberá ser similar a esto. apr-util.x86_64 0:1.5.2-6.el7 httpd-tools.x86_64 0:2.4.6-88.el7.centos mailcap.noarch 0:2.1.41-2.el7 ¡Listo! Iniciamos el servicio systemctl start httpd Debemos recordar que el daemon de Apache en las distribuciones RHEL como Fedora/CentOS/Red Hat se llama httpd y no apache2 como en las distros Debian como Debian/Ubuntu/Canaima. Si queremos que Apache se inicie con el sistema debemos habilitar el daemon. systemctl enable httpd Y no menos importante, habilitar el puerto 80 en el firewall, para esto haremos lo siguiente: firewall-cmd --zone=public --permanent --add-port=80/tcp firewall-cmd --reload Y voilá tenemos Apache instalado, ahora si queremos agregar sitios web, usarlo como reverse proxy u otras cosas debemos configurarlo correctamente.</summary></entry><entry><title type="html">FreeIPA - Crear grupo Read-only</title><link href="http://localhost:4000/2019/02/14/Free-IPA-Crear-grupo-read-only.html" rel="alternate" type="text/html" title="FreeIPA - Crear grupo Read-only" /><published>2019-02-14T00:00:00-03:00</published><updated>2019-02-14T00:00:00-03:00</updated><id>http://localhost:4000/2019/02/14/Free-IPA-Crear-grupo-read-only</id><content type="html" xml:base="http://localhost:4000/2019/02/14/Free-IPA-Crear-grupo-read-only.html">&lt;h3 id=&quot;para-que-queremos-un-grupo-de-read-only&quot;&gt;Para que queremos un grupo de Read-only?&lt;/h3&gt;
 
 &lt;p&gt;Bueno, en el &lt;a href=&quot;/2019/02/08/Instalando-Free-IPA.html&quot;&gt;post anterior&lt;/a&gt; vimos como instalar FreeIPA y también comentamos que nos sirve para autenticar el acceso a diferentes servicios con FreeIPA, para ello vamos a crear un grupo de read-only en el cual crearemos un usuario para bindear y usar FreeIPA como autenticador de otros servicios.&lt;!-- more --&gt;&lt;/p&gt;
 
