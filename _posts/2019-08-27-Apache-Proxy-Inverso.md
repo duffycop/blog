@@ -36,7 +36,7 @@ Expliquemos un poco estos comandos.
 * _httpd -t_ este comando va a revisar la sintaxis de la configuración y nos dirá si tenemos algún error en la misma
 * _httpd -M_ con este parámetro veremos los módulos que tenemos agregados y habilitados en Apache
 * _httpd -k graceful con este comando reiniciamos el servicio sin matar ninguna sesión activa
-*_setenforce 0_ con esto vamos a deshabilitar SELinux, más adelante dedicaré un post completo a SELinux explicando funciones y administración básica del mismo, pero por el momento lo deshabilitaremos.
+* _setenforce 0_ con esto vamos a deshabilitar SELinux, más adelante dedicaré un post completo a SELinux explicando funciones y administración básica del mismo, pero por el momento lo deshabilitaremos.
 
 ### Directorios de Apache
 
@@ -47,6 +47,7 @@ Expliquemos un poco estos comandos.
 /etc/httpd/conf
 /etc/httpd/conf.d
 ```
+<!--
 2. Nos preguntara si queremos instalar httpd y sus dependencias
 ```code
 Tamaño total de la descarga: 3.0 M
@@ -76,3 +77,4 @@ firewall-cmd --reload
 ```
 
 Y voilá tenemos Apache instalado, ahora si queremos agregar sitios web, usarlo como reverse proxy u otras cosas debemos configurarlo correctamente.
+-->
