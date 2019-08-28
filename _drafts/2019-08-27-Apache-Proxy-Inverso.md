@@ -2,6 +2,7 @@
 title:  Apache como Proxy Inverso
 key: 20190827
 author: Tino
+draft: true
 ---
 Hola! Que bueno verte otra vez por aquí!
 Vamos a aprender a utilizar Apache como Proxy Inverso o Proxy Reverso.

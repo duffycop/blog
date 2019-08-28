@@ -221,3 +221,8 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+
+collections:
+drafts: 
+  output: true
+  permalink: /:categories/:title/
