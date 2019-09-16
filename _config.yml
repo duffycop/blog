@@ -213,6 +213,17 @@ defaults:
       show_subscribe: true
       pageview: true
 
+defaults:
+  - scope:
+      path: ""
+      type: drafts
+    values:
+      comments: false
+      share: false
+      related: false
+      sitemap: false  #To hide from sitemap.xml
+      noindex: true   #To hide from robots and crawlers
+
 
 ## => Plugins
 ##############################
