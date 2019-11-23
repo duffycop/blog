@@ -20,41 +20,41 @@ Tener FreeIPA instalado y configurado como vimos [aquí]({% post_url 2019-02-08-
 ipa group-add readonly --desc "A read-only group to bind LDAP authentication"
 ~~~
 La salida de este comando debe ser la siguiente (o muy parecida):
-```code
+~~~ 
 ----------------------
 Added group "readonly"
 ----------------------
   Group name: readonly
   Description: A read-only group to bind LDAP authentication
   GID: 836200003
-```
+~~~
 2. Crear el rol
-```
+~~~ bash
 ipa role-add
-```
-```code
+~~~
+~~~
 Role name: read-only
 ----------------------
 Added role "read-only"
 ----------------------
   Role name: read-only
-```
+~~~
 3. Crear privilegios
-```
+~~~ bash
 ipa privilege-add
-```
-```code
+~~~
+~~~
 Privilege name: read-only
 ---------------------------
 Added privilege "read-only"
 ---------------------------
   Privilege name: read-only
-```
+~~~
 4. Agregar los permisos
-```
+~~~ bash
 ipa permission-add 'readonly' --targetgroup=readonly --permissions=read --attrs=member
-```
-```code
+~~~
+~~~
 ---------------------------
 Added permission "readonly"
 ---------------------------
@@ -66,23 +66,23 @@ Added permission "readonly"
   Target DN: cn=readonly,cn=groups,cn=accounts,dc=ipa,dc=tino,dc=uy
   Target group: readonly
   Permission flags: SYSTEM, V2
-```
+~~~
 5. Asignamos
-```
+~~~ bash
 ipa role-add-privilege read-only
-``
-```code
+~~~
+~~~
 [privilege]: read-only
   Role name: read-only
   Privileges: read-only
 ----------------------------
 Number of privileges added 1
 ----------------------------
-```
-```
+~~~
+~~~ bash
 ipa privilege-add-permission
-```
-```code
+~~~
+~~~
 [permission]: readonly
   Privilege name: read-only
   Permissions: readonly
@@ -90,12 +90,12 @@ ipa privilege-add-permission
 -----------------------------
 Number of permissions added 1
 -----------------------------
-```
+~~~
 Necesitamos usuario y contrasena de FreeIPA y crear el usuario viewonly en el panel del menu.
-```
+~~~ bash
 ipa role-add-member
-```
-```code
+~~~
+~~~
 Role name: read-only
 [member user]: viewonly
 [member group]:
@@ -108,11 +108,11 @@ Role name: read-only
 -------------------------
 Number of members added 1
 -------------------------
-```
-```
+~~~
+~~~ bash
 ipa group-add-member
-```
-```code
+~~~
+~~~
 Group name: readonly
 [member user]: viewonly
 [member group]:
@@ -123,6 +123,6 @@ Group name: readonly
 -------------------------
 Number of members added 1
 -------------------------
-```  
+~~~
 
 Listo, tenemos el grupo readonly creado y solo tiene permisos de lectura en el árbol del directorio de FreeIPA.
