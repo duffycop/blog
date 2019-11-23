@@ -16,9 +16,9 @@ Tener FreeIPA instalado y configurado como vimos [aquí]({% post_url 2019-02-08-
 ### Agregar nuevo grupo de usuarios Read-only
 
 1. Lo primero es crear el grupo, para esto como siempre nos conectamos por ssh al FreeIPA y luego ejecutamos lo siguiente.
-```
+~~~ bash
 ipa group-add readonly --desc "A read-only group to bind LDAP authentication"
-```
+~~~
 La salida de este comando debe ser la siguiente (o muy parecida):
 ```code
 ----------------------
