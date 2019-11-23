@@ -2,6 +2,7 @@
 title:  Instalando DRBD
 key: 20180119
 author: Tino
+layout: article
 ---
 
 Bienvenidos aventureros.

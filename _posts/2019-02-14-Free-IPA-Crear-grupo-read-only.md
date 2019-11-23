@@ -2,6 +2,7 @@
 title:  FreeIPA - Crear grupo Read-only
 key: 20190214
 author: Tino
+layout: article
 ---
 
 ### Para que queremos un grupo de Read-only?

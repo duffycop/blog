@@ -2,6 +2,7 @@
 title:  Instalando FreeIPA
 key: 20190208
 author: Tino
+layout: article
 ---
 
 ### Que es FreeIPA (Free Identity Policy Audit)?
