@@ -35,12 +35,12 @@ Tamaño instalado: 10 M
 Is this ok [y/d/N]: y
 ~~~
 Esto comenzara con la instalación de Apache y la salida deberá ser similar a esto.
+~~~ bash
 apr-util.x86_64 0:1.5.2-6.el7
 httpd-tools.x86_64 0:2.4.6-88.el7.centos
 mailcap.noarch 0:2.1.41-2.el7
-¡Listo!.
-{:.info}
-
+¡Listo!
+~~~
 3. Iniciamos el servicio
 ~~~ bash
 systemctl start httpd
