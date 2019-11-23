@@ -26,22 +26,22 @@ Necesitamos un equipo con CentOS 7 en este caso sera virtualizado y la tarjeta d
 
 ### Configuración previa
 1. Para esto vamos a configurar el CentOS 7, nos conectamos por ssh  
-```
+~~~ bash
 ssh root@172.16.121.136
-```
+~~~
 2. Y borramos el contenido del archivo _/etc/hostname_ y colocamos el nombre fqdn que querramos para nuestro LDAP  
-```
+~~~
 ipa.tino.uy
-```
+~~~
 3. Luego editamos el archivo _/etc/hosts/_, lo mismo que antes  
-```
+~~~
 172.16.121.136 ipa.tino.uy ipa.tino.uy ipa
-```
+~~~
 4. Configuración de firewall  
-```
+~~~ bash
 firewall-cmd --permanent --add-port={80/tcp,443/tcp,389/tcp,636/tcp,88/tcp,464/tcp,53/tcp,88/udp,464/udp,53/udp,123/udp}
 firewall-cmd --reload
-```
+~~~
 5. Luego reiniciamos el centos con _reboot_ y volvemos a conectarnos por ssh (ver paso 1)  
 
 ### Configurando el Generador de Números Aleatorios
@@ -49,28 +49,28 @@ firewall-cmd --reload
 Configurar un FreeIPA requiere de un montón de datos aleatorios para las operaciones criptográficas que corre. Por defecto una maquina virtual se queda sin datos aleatorios o entropía muy rápidamente. Para solucionar esto usaremos ***rngd***, un software generador de números aleatorios.  
 
 1. Debemos instalar ***rngd***  
-```
+~~~ bash
 yum install rng-tools
 systemctl start rngd
 systemctl enable rngd
 systemctl status rngd
-```
+~~~
 La salida debe incluir active (running) en verde.  
 
 ### Instalando FreeIPA
 
 1. Ahora si, instalamos el paquete ipa-server.  
-```
+~~~ bash
 yum install ipa-server
-```
+~~~
 
 2. Ejecutar el comando de instalación.  
-```
+~~~ bash
 ipa-server-install
-```
+~~~
 
 3. Prompt de la instalación.  
-```code
+~~~
 Do you want to configure integrated DNS (BIND)? [no]: no  
 Server host name [ipa.tino.uy]: ipa.tino.uy  
 Please confirm the domain name [tino.uy]: ipa.tino.uy  
@@ -78,23 +78,23 @@ Please provide a realm name [IPA.TINO.UY]: ipa.tino.uy
 Directory Manager password:  
 IPA admin password:  
 Continue to configure the system with these values? [no]: yes  
-```
+~~~
 El proceso de instalación llevará unos minutos.  
 
 ### Verificar las funciones de FreeIPA
 
 1. Primero debemos verificar que el dominio de Kerberos fue instalado correctamente intentando inicializar el token de Kerberos para el usuario admin.  
-```
+~~~ bash
 kinit admin
-```
+~~~
 Si funciona correctamente entonces debería pedirte la contraseña de admin de FreeIPA que escribimos hace unos minutos.  
 
 2. Verificar que el servidor IPA funciona adecuadamente.  
-```
+~~~ bash
 ipa user-find admin
-```
+~~~
 La salida de este comando debería ser la siguiente.  
-```code
+~~~
 ---------------------
 1 usuario coincidente
 ---------------------
@@ -109,7 +109,7 @@ La salida de este comando debería ser la siguiente.
 --------------------------------
 Cantidad de entradas devueltas 1
 --------------------------------
-```
+~~~
 También tendremos acceso a una interfaz web en https://ipa.tino.uy
 
 Y voilá, tenemos FreeIPA instalado y listo para usar.
