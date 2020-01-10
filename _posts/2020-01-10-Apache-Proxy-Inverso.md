@@ -36,7 +36,6 @@ touch /etc/httpd/conf.d/example.conf
 ~~~
 
 2. Lo editamos con vi, vim, nano o el editor de nuestra preferencia y agregamos lo siguiente:
-{% raw %}
 ~~~ apache
 <VirtualHost *:80>
 
@@ -48,7 +47,6 @@ touch /etc/httpd/conf.d/example.conf
 
 </VirtualHost>
 ~~~
-{% endraw %}
 
 Donde example.com es nuestro dominio y 10.0.0.1 es el server al que queremos enviar el request.
 Para guardar en Vi o Vim presionamos Esc, luego escribimos :wq y damos enter.
@@ -66,8 +64,7 @@ proxy_balancer_module (shared)
 ~~~
 
 2. Igual que en el apartado anterior creamos el Virtual Host pero esta vez escribimos lo siguiente.
-{% raw %}
-~~~ bash
+~~~ apache
 <VirtualHost *:80>
 
 	ServerName example.com
@@ -85,6 +82,5 @@ proxy_balancer_module (shared)
 
 </VirtualHost>
 ~~~
-{% endraw %}
 
 De esta forma habremos configurado nuestro Apache como Proxy Reverso, tanto para uno como para múltiples backends.
