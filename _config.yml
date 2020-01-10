@@ -239,4 +239,5 @@ drafts:
   permalink: /:categories/:title/
 
 ## Netlify Headers
-include: _headers
+include: 
+  - _headers
