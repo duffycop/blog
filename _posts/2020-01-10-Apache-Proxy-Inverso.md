@@ -36,7 +36,7 @@ touch /etc/httpd/conf.d/example.conf
 ~~~
 
 2. Lo editamos con vi, vim, nano o el editor de nuestra preferencia y agregamos lo siguiente:
-~~~ apache
+{% highlight apache %}
 <VirtualHost *:80>
 
         ServerName example.com
@@ -46,7 +46,7 @@ touch /etc/httpd/conf.d/example.conf
         ProxyPassReverse "/" "http://10.0.0.1/"
 
 </VirtualHost>
-~~~
+{% endhighlight %}
 
 Donde example.com es nuestro dominio y 10.0.0.1 es el server al que queremos enviar el request.
 Para guardar en Vi o Vim presionamos Esc, luego escribimos :wq y damos enter.
