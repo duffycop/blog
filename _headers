@@ -1,0 +1,8 @@
+/*
+  X-Frame-Options: SAME-ORIGIN
+  Referrer-Policy: SAME-ORIGIN
+  X-XSS-Protection: 1; mode=block
+  Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+  X-Content-Type-Options: nosniff
+  Content-Security-Policy: connect-src 'self';
+  Feature-Policy: vibrate 'self'; usermedia *; sync-xhr 'self' https://tinouy.com
