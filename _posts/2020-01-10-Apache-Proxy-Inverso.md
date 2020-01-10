@@ -35,7 +35,8 @@ proxy_module (shared)
 touch /etc/httpd/conf.d/example.conf
 ~~~
 
-2. Lo editamos con vi, vim, nano o el editor de nuestra preferencia y agregamos lo siguiente: {% raw %}
+2. Lo editamos con vi, vim, nano o el editor de nuestra preferencia y agregamos lo siguiente:
+{% raw %}
 ~~~ bash
 <VirtualHost *:80>
 
