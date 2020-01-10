@@ -38,7 +38,7 @@ touch /etc/httpd/conf.d/example.conf
 2. Lo editamos con vi, vim, nano o el editor de nuestra preferencia y agregamos lo siguiente:
 {% raw %}
 ~~~ bash
-<VirtualHost *:80>
+&lt;VirtualHost *:80&gt;
 
         ServerName example.com
         ServerAlias www.example.com
