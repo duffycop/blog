@@ -36,7 +36,6 @@ touch /etc/httpd/conf.d/example.conf
 ~~~
 
 2. Lo editamos con vi, vim, nano o el editor de nuestra preferencia y agregamos lo siguiente:
-
 ~~~ bash
 <VirtualHost *:80>
 
@@ -65,7 +64,7 @@ proxy_balancer_module (shared)
 ~~~
 
 2. Igual que en el apartado anterior creamos el Virtual Host pero esta vez escribimos lo siguiente.
-
+~~~ bash
 <VirtualHost *:80>
 
 	ServerName example.com
@@ -82,5 +81,6 @@ proxy_balancer_module (shared)
 	ProxyPassReverse / balancer://mycluster/
 
 </VirtualHost>
+~~~
 
 De esta forma habremos configurado nuestro Apache como Proxy Reverso, tanto para uno como para múltiples backends.
