@@ -64,7 +64,7 @@ proxy_balancer_module (shared)
 ~~~
 
 2. Igual que en el apartado anterior creamos el Virtual Host pero esta vez escribimos lo siguiente.
-{% highlight apache %}
+{% highlight apache linenos %}
 <VirtualHost *:80>
 
 	ServerName example.com
