@@ -237,3 +237,6 @@ collections:
 drafts: 
   output: true
   permalink: /:categories/:title/
+
+## Netlify Headers
+include: _headers
