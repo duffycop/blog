@@ -64,7 +64,7 @@ proxy_balancer_module (shared)
 ~~~
 
 2. Igual que en el apartado anterior creamos el Virtual Host pero esta vez escribimos lo siguiente.
-```apache
+{% highlight apache %}
 <VirtualHost *:80>
 
 	ServerName example.com
@@ -81,6 +81,6 @@ proxy_balancer_module (shared)
 	ProxyPassReverse / balancer://mycluster/
 
 </VirtualHost>
-```
+{% endhighlight %}
 
 De esta forma habremos configurado nuestro Apache como Proxy Reverso, tanto para uno como para múltiples backends.
