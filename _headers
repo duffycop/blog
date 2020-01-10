@@ -1,16 +1,11 @@
 /*
-  X-Frame-Options: SAMEORIGIN
-  Referrer-Policy: SAMEORIGIN
-  X-XSS-Protection: 1; mode=block
-  Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
-  X-Content-Type-Options: nosniff
-  Content-Security-Policy: connect-src 'self';
-  Feature-Policy: vibrate 'self'; usermedia *; sync-xhr 'self' https://tinouy.com
+ X-Frame-Options: SAMEORIGIN
+ X-XSS-Protection: 1; mode=block
+ Referrer-Policy: no-referrer
+ X-Content-Type-Options: nosniff
+ Strict-Transport-Security: max-age=2592000; includeSubDomains; preload
+ Feature-Policy: geolocation 'none'; midi 'none'; sync-xhr 'none';
+ microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none';
+ speaker 'none'; fullscreen 'none'; payment 'none'
+ Content-Security-Policy: default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline'
 
-#Content-Security-Policy: connect-src 'self';
-#Feature-Policy: vibrate 'self'; usermedia *; sync-xhr 'self' https://prextest.com
-#Referrer-Policy: SAME-ORIGIN
-#Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
-#X-Content-Type-Options: nosniff
-#X-Frame-Options: SAME-ORIGIN
-#X-XSS-Protection: 1; mode=block
