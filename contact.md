@@ -69,15 +69,16 @@ key: contact
 
 <!-- Form Started -->
 
-<form action="https://formspree.io/cmartinpf@gmail.com
+<form action="https://formspree.io/moqeezze
 " method="POST">
-	<label>Name</label>
+	<label>Nombre</label>
  <input type="text" name="name" placeholder="Escribe aqui tu nombre">
  <label>Email</label>
  <input type="email" name="_replyto" placeholder="Escribe aqui tu correo">
- <label>Message</label>
+ <label>Mensaje</label>
  <textarea name="message" placeholder="Escribe aqui tu mensaje"></textarea>
  <input class="button" id="submit" type="submit" value="Send">
 </form>
+
 
 <!-- Form Ended -->
