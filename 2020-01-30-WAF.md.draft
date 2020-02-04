@@ -1,22 +1,21 @@
 ---
-title:  Apache como Proxy Inverso
-key: 20200110
+title:  Web Application Firewall
+key: 20200131
 author: Tino
 layout: article
 ---
 
-Hola! Que bueno verte otra vez por aquí!
-Vamos a aprender a utilizar Apache como Proxy Inverso o Proxy Reverso.
+Opa! Ya se te está haciendo costumbre visitarme.
+Sabés que tenemos para hoy? Si viste el título y sos curioso, seguro algo ya conocés.
 
-### Que es un Servidor Proxy?
-Un proxy, o servidor proxy, en una red informática, es un servidor —programa o dispositivo—, que hace de intermediario en las peticiones de recursos que realiza un cliente (A) a otro servidor (C). Por ejemplo, si una hipotética máquina A solicita un recurso a C, lo hará mediante una petición a B, que a su vez trasladará la petición a C; de esta forma C no sabrá que la petición procedió originalmente de A. [Wikipedia](https://es.wikipedia.org/wiki/Servidor_proxy) <!-- more -->  
-Pero probablemente eres muy curioso y ya conoces como trabaja un proxy, normalmente se utiliza como un intermediario entre un equipo o red e Internet. El proxy inverso funciona exactamente al revés, un equipo cualquiera de Internet quiere acceder a un equipo de nuestra red, entonces pasa por este intermediario y deriva la petición en uno o varios servidores de backend.
+### Que es un Web Application Firewall?
+Un WAF o Web Application Firewall es es un tipo de firewall que supervisa, filtra o bloquea el tráfico HTTP hacia y desde una aplicación web. <!-- more --> Al inspeccionar el tráfico HTTP un WAF protege a las aplicaciones web contra ataques como los de inyección SQL, XSS y falsificación de petición de sitios cruzados (CSRF). [Wikipedia](https://es.wikipedia.org/wiki/Web_application_firewall)
 
 ### Que necesitamos?
 
 Un equipo CentOS instalado y Apache, si no sabes como instalar Apache puedes verlo en [este post]({% post_url 2019-02-18-Instalando-Apache-CentOS-7 %}).
 
-### Chequeando mod_proxy
+### Instalación de modsecurity
 
 1. Lo primero será chequear que mod_proxy esté habilitado y corriendo en Apache, por lo general viene habilitado por defecto.
 ~~~ bash
