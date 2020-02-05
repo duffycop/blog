@@ -3,7 +3,6 @@ title:  Apache como Proxy Inverso
 key: 20200110
 author: Tino
 layout: article
-comments: true
 ---
 
 Hola! Que bueno verte otra vez por aquí!
