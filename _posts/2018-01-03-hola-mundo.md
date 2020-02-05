@@ -3,7 +3,6 @@ title: "Hola Mundo!"
 key: 20180103
 author: Tino
 layout: article
-comments: true
 ---
 
 
