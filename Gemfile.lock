@@ -32,6 +32,7 @@ GEM
     gemoji (3.0.0)
     github-pages (193)
       activesupport (= 4.2.10)
+      rubyzip (= 2.0.0)
       github-pages-health-check (= 1.8.1)
       jekyll (= 3.7.4)
       jekyll-avatar (= 0.6.0)
