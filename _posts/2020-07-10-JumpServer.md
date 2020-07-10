@@ -61,7 +61,7 @@ chmod +x guac-install.sh
 ./guac-install.sh
 ~~~
 
-Primero que nada agradecer a Zer0CoolX por su fantabuloso script automágico. El proceso de instalación de Guacamole puede ser bastante tedioso, pero este señor nos lo hizo simple.
+Primero que nada agradecer a [Zer0CoolX](https://github.com/Zer0CoolX) por su fantabuloso script automágico. El proceso de instalación de Guacamole puede ser bastante tedioso, pero este señor nos lo hizo simple.
 Después de seguir el proceso de instalación del script tendremos un NGINX (que a mí particularmente no me funcionó y mucho menos como yo esperaba pero no nos importa, tenemos un [Apache como Reverse Proxy]({% post_url 2020-01-10-Apache-Proxy-Inverso %}) el cual podremos configurar para apuntar al Guacamole con un subdominio más bonito), también tendremos instalado un Tomcat y el daemon de Guacamole (guacd).
 ¿Cómo sigue esto? Pues bien, vamos a http://10.10.1.10:8080/guacamole y accedemos con las credenciales por defecto que son:
 ~~~
@@ -70,7 +70,7 @@ password: guacadmin
 ~~~
 
 Y listo estamos dentro de Guacamole, aquí podremos configurar usuarios, accesos y otras yerbas.
-Para la grabación de las sesiones tuve que googlear un poquito, pero no fué muy complicado de arreglar.
+Para la grabación de las sesiones tuve que googlear un poquito (gracias [StackOverflow](https://stackoverflow.com/questions/60630083/how-to-setup-guacamole-session-recording-with-rdp-and-ssh), pero no fué muy complicado de arreglar.
 Creé un directorio con permisos para el daemon guacd, en mi caso lo puse en /var/tmp/guacamole
 ~~~ bash
 # ls -l | grep guacamole
@@ -85,6 +85,7 @@ Donde HOST es el nombre del host al que quiero conectarme, entonces me queda en 
 Las grabaciones quedan en un formato que solamente es interpretable por Guacamole, peeeero, la ventaja es que queda bastante comprimido, en una prueba realizada a un RDP durante 43 minutos pesaba 9MB.
 Para transformarlas a un formato de audio hay que usar un comando como el siguiente:
 > guacenc -s 1280x720 -r 20000000 -f tino_20200710_144616
+
 Esto nos crea un archivo tino_20200710_144616.m4v y podemos verlo en nuestro reproductor favorito.
 
 
