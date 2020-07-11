@@ -4,6 +4,7 @@ title:  JumpServer
 key: 20200706
 author: Tino
 article_header:
+  excerpt_type: html
   type: overlay
   theme: dark
   background_color: '#123'
