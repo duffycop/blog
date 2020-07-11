@@ -2,7 +2,7 @@
 title:  JumpServer
 key: 20200706
 author: Tino
-layout: article
+layout: page
 ---
 
 Mi3rd4! Un usuario accedió al server y rompió todo.
