@@ -11,6 +11,7 @@ article_header:
 ---
 
 Mi3rd4! Un usuario accedió al server y rompió todo.<!-- more --> 
+
 Ehhh no, estas cosas no pueden pasar. Los usuarios no deben tener acceso a la red de los servidores, para esto se segmentan las redes. Todos los usuarios por un lado, todos los servers por otro y no solo eso, sino que cada ambiente también debería ir segmentado, Producción, Preproducción, Testing, Desarrollo., todos deberían ir en redes (vlans, o cualquier tipo de segmentación) diferentes.
 Y no deberíamos de tener equipos de la red de usuarios conectados a las redes de los servidores, toda tarea que se ejecute sobre los servidores debería hacerse a través de un jumpserver o también conocido como bastion host, en el cual monitoreamos toda la actividad de nuestros usuarios/administradores sobre los servidores.
 
