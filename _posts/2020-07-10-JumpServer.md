@@ -10,14 +10,14 @@ article_header:
   background_image: false
 ---
 
-Mi3rd4! Un usuario accedió al server y rompió todo.
+Mi3rd4! Un usuario accedió al server y rompió todo.<!-- more --> 
 Ehhh no, estas cosas no pueden pasar. Los usuarios no deben tener acceso a la red de los servidores, para esto se segmentan las redes. Todos los usuarios por un lado, todos los servers por otro y no solo eso, sino que cada ambiente también debería ir segmentado, Producción, Preproducción, Testing, Desarrollo., todos deberían ir en redes (vlans, o cualquier tipo de segmentación) diferentes.
 Y no deberíamos de tener equipos de la red de usuarios conectados a las redes de los servidores, toda tarea que se ejecute sobre los servidores debería hacerse a través de un jumpserver o también conocido como bastion host, en el cual monitoreamos toda la actividad de nuestros usuarios/administradores sobre los servidores.
 
 Sé que te prometí un post de WAF, pero todavía no lo he armado, en cambio te traigo este bonito post sobre Apache Guacamole! Probalo y contame qué te pareció Guacamole y el post.
 
 ### Qué es un JumpServer?
-[Wikipedia](https://en.wikipedia.org/wiki/Jump_server) nos dice que es un ordenador en una red utilizada para acceder y administrar dispositivos en una zona de seguridad por separado. El ejemplo más común es la gestión de un host en una zona desmilitarizada de redes o equipos de confianza. Nosotros no vamos a usar una DMZ vamos a segmentar nuestras redes internas.<!-- more --> 
+[Wikipedia](https://en.wikipedia.org/wiki/Jump_server) nos dice que es un ordenador en una red utilizada para acceder y administrar dispositivos en una zona de seguridad por separado. El ejemplo más común es la gestión de un host en una zona desmilitarizada de redes o equipos de confianza. Nosotros no vamos a usar una DMZ vamos a segmentar nuestras redes internas.
 
 ### Que necesitamos?
 Para este ejemplo solo vamos a tener 2 subredes, supongamos que tenemos a los usuarios en la red A y los servers en la red B, las subredes en este ejemplo son random.
