@@ -1,6 +1,6 @@
 ---
-layout: article
 title:  JumpServer
+layout: article
 key: 20200706
 author: Tino
 aside:
