@@ -10,14 +10,14 @@ aside:
 Opa! Ya se te está haciendo costumbre visitarme.
 Sabés que hacemos hoy? Hoy vamos a usar Apache como LoadBalancer.<!--more-->
 
-### Qué es un LoadBalancer?
+## Qué es un LoadBalancer?
 Un balanceador de carga distribuye la carga entre dos o más servidores de backend, de esta forma podemos aumentar la disponibilidad ya que si se cae uno de los servidores backend la aplicación puede seguir funcionando con los demás, además al distribuir la carga disminuye el tiempo de respuesta porque todos los servidores trabajan con menor cantidad de carga lo cual influye en la velocidad de respuesta.
 
-### Que necesitamos?
+## Que necesitamos?
 
 Un equipo CentOS instalado y Apache, si no sabes como instalar Apache puedes verlo en [este post]({% post_url 2019-02-18-Instalando-Apache-CentOS-7 %}).
 
-### Chequeando mod_proxy_balancer
+## Chequeando mod_proxy_balancer
 
 1. Lo primero será chequear que mod_proxy_balancer esté habilitado y corriendo en Apache, por lo general viene habilitado por defecto.
 ~~~ bash
@@ -30,7 +30,7 @@ proxy_balancer_module (shared)
 
 2. Ya con el módulo activado lo que debemos hacer es configurar nuestro Virtual Host.
 
-### Configurando Reverse Proxy
+## Configurando Reverse Proxy
 
 1. Creamos el archivo de nuestro Virtual Host.
 ~~~ bash
