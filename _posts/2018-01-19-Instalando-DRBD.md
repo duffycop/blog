@@ -1,8 +1,10 @@
 ---
 title:  Instalando DRBD
+layout: article
 key: 20180119
 author: Tino
-layout: article
+aside:
+  toc: true
 ---
 
 Bienvenidos aventureros.
