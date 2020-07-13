@@ -1,8 +1,10 @@
 ---
 title:  Instalando Apache en CentOS 7
+layout: article
 key: 20190218
 author: Tino
-layout: article
+aside:
+  toc: true
 ---
 Hey! Me alegra verte de nuevo por aquí!
 Hoy vamos a ver la instalación de Apache Web Server en un CentOS 7.
