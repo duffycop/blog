@@ -1,8 +1,10 @@
 ---
 title:  Apache como Proxy Inverso
+layout: article
 key: 20200110
 author: Tino
-layout: article
+aside:
+  toc: true
 ---
 
 Hola! Que bueno verte otra vez por aquí!
