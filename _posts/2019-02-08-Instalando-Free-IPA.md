@@ -7,18 +7,18 @@ aside:
   toc: true
 ---
 
-### Que es FreeIPA (Free Identity Policy Audit)?
+## Que es FreeIPA (Free Identity Policy Audit)?
 
-Es un proyecto de suite de software de código fuente libre mantenida por el Proyecto Fedora, patrocinada por RedHat, el nombre significa Identidad Políticas Auditoría Libre (en inglés, Free Identity Policy Audit), tiene por objetivo proveer un interfaz segura y sencilla para la administración de identidades comparable a Novell Identity Manager, IBM Security Directory Suite, Redhat 389 Directory Server, Apache Directory Studio y Microsoft Active Directory.<!-- more --> [Wikipedia](https://es.wikipedia.org/wiki/FreeIPA)  
+Es un proyecto de suite de software de código fuente libre mantenida por el Proyecto Fedora, patrocinada por RedHat, el nombre significa Identidad Políticas Auditoría Libre (en inglés, Free Identity Policy Audit), tiene por objetivo proveer un interfaz segura y sencilla para la administración de identidades comparable a Novell Identity Manager, IBM Security Directory Suite, Redhat 389 Directory Server, Apache Directory Studio y Microsoft Active Directory.<!--more--> [Wikipedia](https://es.wikipedia.org/wiki/FreeIPA)  
 
-#### Para que queremos un FreeIPA?  
+## Para que queremos un FreeIPA?  
 
 El FreeIPA nos sirve para manejar los usuarios de nuestra red de forma centralizada.
 Seguramente habrás escuchado en algún momento de Active Directory o LDAP o Dominio a nivel de redes empresariales.
 Pues lo que sucede es sencillo, en una red hogareña con dos o tres equipos es fácil administrar usuarios y permisos individuales en cada equipo ya que es una cantidad reducida, pero en una red con 50 equipos manejar usuarios y permisos equipo por equipo ya se vuelve algo tedioso, para esto se configura un servidor de Directorio Activo, se manejan todos los usuarios y grupos de forma centralizada en nuestro server de LDAP, Active Directory o FreeIPA. De esta forma agregar un usuario que puedan autenticarse en cualquier equipo, o darle permisos a un usuario para conectarse a determinado recurso compartido o impresora es mucho mas sencillo y puede hacerse desde un equipo y para toda la red.
 Ademas podemos conectar otros tipos de servicios para que se autentiquen contra nuestro FreeIPA y que solo usuarios de nuestro dominio puedan acceder a estos servicios, pero esto ya lo veremos más adelante.   
 
-### Que necesitamos?
+## Que necesitamos?
 
 Necesitamos un equipo con CentOS 7 en este caso sera virtualizado y la tarjeta de red estará en modo NAT.  
 
@@ -26,7 +26,7 @@ Necesitamos un equipo con CentOS 7 en este caso sera virtualizado y la tarjeta d
 >IP: 172.16.121.136  
 >Hostname: ipa.tino.uy
 
-### Configuración previa
+## Configuración previa
 1. Para esto vamos a configurar el CentOS 7, nos conectamos por ssh  
 ~~~ bash
 ssh root@172.16.121.136
@@ -46,7 +46,7 @@ firewall-cmd --reload
 ~~~
 5. Luego reiniciamos el centos con _reboot_ y volvemos a conectarnos por ssh (ver paso 1)  
 
-### Configurando el Generador de Números Aleatorios
+## Configurando el Generador de Números Aleatorios
 
 Configurar un FreeIPA requiere de un montón de datos aleatorios para las operaciones criptográficas que corre. Por defecto una maquina virtual se queda sin datos aleatorios o entropía muy rápidamente. Para solucionar esto usaremos ***rngd***, un software generador de números aleatorios.  
 
@@ -59,7 +59,7 @@ systemctl status rngd
 ~~~
 La salida debe incluir active (running) en verde.  
 
-### Instalando FreeIPA
+## Instalando FreeIPA
 
 1. Ahora si, instalamos el paquete ipa-server.  
 ~~~ bash
