@@ -7,7 +7,7 @@ aside:
   toc: true
 ---
 
-¡Hola! ¡Volviste! Te preguntarás ¿por qué? o ¿para qué? queremos un grupo de read-only, acá te lo cuento.
+¡Hola! ¡Volviste! Te preguntarás ¿por qué? o ¿para qué? queremos un grupo de read-only, acá te lo cuento.<!--more-->
 
 ## Para que queremos un grupo de Read-only?
 
