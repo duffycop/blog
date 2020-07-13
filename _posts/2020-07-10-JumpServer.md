@@ -3,12 +3,8 @@ layout: article
 title:  JumpServer
 key: 20200706
 author: Tino
-article_header:
-  excerpt_type: html
-  type: overlay
-  theme: dark
-  background_color: '#123'
-  background_image: false
+aside:
+  toc: true
 ---
 
 Mi3rd4! Un usuario accedió al server y rompió todo.<!-- more --> 
