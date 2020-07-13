@@ -1,12 +1,14 @@
 ---
 title:  Apache como LoadBalancer
+layout: article
 key: 20200206
 author: Tino
-layout: article
+aside:
+  toc: true
 ---
 
 Opa! Ya se te está haciendo costumbre visitarme.
-Sabés que hacemos hoy? Hoy vamos a usar Apache como LoadBalancer.
+Sabés que hacemos hoy? Hoy vamos a usar Apache como LoadBalancer.<!--more-->
 
 ### Qué es un LoadBalancer?
 Un balanceador de carga distribuye la carga entre dos o más servidores de backend, de esta forma podemos aumentar la disponibilidad ya que si se cae uno de los servidores backend la aplicación puede seguir funcionando con los demás, además al distribuir la carga disminuye el tiempo de respuesta porque todos los servidores trabajan con menor cantidad de carga lo cual influye en la velocidad de respuesta.
