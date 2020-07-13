@@ -44,7 +44,7 @@ De esta forma si queremos acceder a un equipo de la red de servidores sólo podr
 Ahora, todo bonito así contado, pero cuando vamos al "hands-on" qué herramientas vamos a usar?
 Y en este caso lo que vamos a usar es nuestra distro amiga CentOS 7 y Apache Guacamole para hacer de jumpserver.
 
-####_¿Por qué Guacamole?_
+#### _¿Por qué Guacamole?_
 1. Licencia Apache
 2. Gratuito
 3. Permite grabar todo lo que hacemos en los servidores
@@ -55,7 +55,8 @@ Al cual le pusimos la IP 10.10.1.10 dentro de la red de servidores. En nuestro f
 Si tenemos otros servicios que necesitemos tener abiertos a nuestros usuarios, una intranet, un puerto en particular para una aplicación desktop, etc. Debe configurarse en el firewall también. Es necesario tener en cuenta que lo que queremos controlar es la conexión remota a estos equipos y el uso interactivo de los mismos.
 No necesariamente necesitamos bloquear los accesos de aplicaciones y otras yerbas.
 
-Bien, hacemos SSH a root@10.10.1.10
+### Empecemos
+Bien, hacemos SSH a root@10.10.1.10.
 Acá comienza lo jugoso:
 
 ~~~ bash
