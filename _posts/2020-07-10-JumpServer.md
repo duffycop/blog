@@ -17,7 +17,8 @@ Sé que te prometí un post de WAF, pero todavía no lo he armado, en cambio te 
 ## Qué es un JumpServer?
 [Wikipedia](https://en.wikipedia.org/wiki/Jump_server) nos dice que es un ordenador en una red utilizada para acceder y administrar dispositivos en una zona de seguridad por separado. El ejemplo más común es la gestión de un host en una zona desmilitarizada de redes o equipos de confianza. Nosotros no vamos a usar una DMZ vamos a segmentar nuestras redes internas.
 
-## Que necesitamos?
+## Empecemos
+### Que necesitamos?
 Para este ejemplo solo vamos a tener 2 subredes, supongamos que tenemos a los usuarios en la red A y los servers en la red B, las subredes en este ejemplo son random.
 
 La red A contiene las workstations:
@@ -44,7 +45,7 @@ De esta forma si queremos acceder a un equipo de la red de servidores sólo podr
 Ahora, todo bonito así contado, pero cuando vamos al "hands-on" qué herramientas vamos a usar?
 Y en este caso lo que vamos a usar es nuestra distro amiga CentOS 7 y Apache Guacamole para hacer de jumpserver.
 
-### _¿Por qué Guacamole?_
+### ¿Por qué Guacamole?
 1. Licencia Apache
 2. Gratuito
 3. Permite grabar todo lo que hacemos en los servidores
@@ -55,7 +56,7 @@ Al cual le pusimos la IP 10.10.1.10 dentro de la red de servidores. En nuestro f
 Si tenemos otros servicios que necesitemos tener abiertos a nuestros usuarios, una intranet, un puerto en particular para una aplicación desktop, etc. Debe configurarse en el firewall también. Es necesario tener en cuenta que lo que queremos controlar es la conexión remota a estos equipos y el uso interactivo de los mismos.
 No necesariamente necesitamos bloquear los accesos de aplicaciones y otras yerbas.
 
-## Empecemos
+### Instalación
 Bien, hacemos SSH a root@10.10.1.10.
 Acá comienza lo jugoso:
 
