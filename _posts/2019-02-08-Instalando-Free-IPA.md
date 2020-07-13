@@ -1,8 +1,10 @@
 ---
 title:  Instalando FreeIPA
+layout: article
 key: 20190208
 author: Tino
-layout: article
+aside:
+  toc: true
 ---
 
 ### Que es FreeIPA (Free Identity Policy Audit)?
