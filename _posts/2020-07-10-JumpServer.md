@@ -45,10 +45,10 @@ Ahora, todo bonito así contado, pero cuando vamos al "hands-on" qué herramient
 Y en este caso lo que vamos a usar es nuestra distro amiga CentOS 7 y Apache Guacamole para hacer de jumpserver.
 
 ***¿Por qué Guacamole?***
-1 - Licencia Apache
-2 - Gratuito
-3 - Permite grabar todo lo que hacemos en los servidores
-4 - ¿Por qué no?
+1. Licencia Apache
+2. Gratuito
+3. Permite grabar todo lo que hacemos en los servidores
+4. ¿Por qué no?
 
 Entonces, para esto tenemos un CentOS 7 nuevo de paquete.
 Al cual le pusimos la IP 10.10.1.10 dentro de la red de servidores. En nuestro firewall ya configuramos que bloquee todas las conexiones a los equipos de la red de servidores, excepto el puerto 8080 (o el 80*) y el 22 momentaneamente solamente desde la IP 192.168.0.100 (sysadmin) hasta poder conectarnos con Guacamole a nuestro JumpServer.
