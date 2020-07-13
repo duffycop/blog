@@ -7,6 +7,8 @@ aside:
   toc: true
 ---
 
+Hey! Que bueno verte de nuevo! Te hago una pregunta, sabés lo que es un FreeIPA? Si no lo sabés no importa, acá te lo cuento y te digo cómo instalarlo! Mirá.
+
 ## Que es FreeIPA (Free Identity Policy Audit)?
 
 Es un proyecto de suite de software de código fuente libre mantenida por el Proyecto Fedora, patrocinada por RedHat, el nombre significa Identidad Políticas Auditoría Libre (en inglés, Free Identity Policy Audit), tiene por objetivo proveer un interfaz segura y sencilla para la administración de identidades comparable a Novell Identity Manager, IBM Security Directory Suite, Redhat 389 Directory Server, Apache Directory Studio y Microsoft Active Directory.<!--more--> [Wikipedia](https://es.wikipedia.org/wiki/FreeIPA)  
