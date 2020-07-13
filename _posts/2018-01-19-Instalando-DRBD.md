@@ -11,10 +11,11 @@ Bienvenidos aventureros.
 En este post vamos a aprender a instalar DRBD. <!-- more -->.
 En cada nodo tendremos un disco vacio y completamente dedicado a DRBD, por lo tanto usaremos este disco /dev/vda
 
-### Que es DRBD (Distributed Replicated Block Device)?
+## Que es DRBD (Distributed Replicated Block Device)?
 
 DRBD es un software que permite hacer replica de los datos de una particion o disco entre varias maquinas a traves de la red.
 
+## Empecemos
 ### Entorno
 > Nodo1 | drbd1 | 192.168.10.10 | CentOS 7
 >
