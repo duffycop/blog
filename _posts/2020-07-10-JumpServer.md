@@ -44,7 +44,7 @@ De esta forma si queremos acceder a un equipo de la red de servidores sólo podr
 Ahora, todo bonito así contado, pero cuando vamos al "hands-on" qué herramientas vamos a usar?
 Y en este caso lo que vamos a usar es nuestra distro amiga CentOS 7 y Apache Guacamole para hacer de jumpserver.
 
-####***¿Por qué Guacamole?***
+####_¿Por qué Guacamole?_
 1. Licencia Apache
 2. Gratuito
 3. Permite grabar todo lo que hacemos en los servidores
