@@ -7,15 +7,17 @@ aside:
   toc: true
 ---
 
-### Para que queremos un grupo de Read-only?
+¡Hola! ¡Volviste! Te preguntarás ¿por qué? o ¿para qué? queremos un grupo de read-only, acá te lo cuento.
+
+## Para que queremos un grupo de Read-only?
 
 Bueno, en el [post anterior]({% post_url 2019-02-08-Instalando-Free-IPA %}) vimos como instalar FreeIPA y también comentamos que nos sirve para autenticar el acceso a diferentes servicios con FreeIPA, para ello vamos a crear un grupo de read-only en el cual crearemos un usuario para bindear y usar FreeIPA como autenticador de otros servicios.<!-- more -->  
 
-### Que necesitamos?
+## Que necesitamos?
 
 Tener FreeIPA instalado y configurado como vimos [aquí]({% post_url 2019-02-08-Instalando-Free-IPA %}).  
 
-### Agregar nuevo grupo de usuarios Read-only
+## Agregar nuevo grupo de usuarios Read-only
 
 1. Lo primero es crear el grupo, para esto como siempre nos conectamos por ssh al FreeIPA y luego ejecutamos lo siguiente.
 ~~~ bash
