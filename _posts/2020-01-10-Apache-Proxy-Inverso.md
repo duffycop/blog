@@ -14,7 +14,8 @@ Vamos a aprender a utilizar Apache como Proxy Inverso o Proxy Reverso.<!--more--
 Un proxy, o servidor proxy, en una red informática, es un servidor —programa o dispositivo—, que hace de intermediario en las peticiones de recursos que realiza un cliente (A) a otro servidor (C). Por ejemplo, si una hipotética máquina A solicita un recurso a C, lo hará mediante una petición a B, que a su vez trasladará la petición a C; de esta forma C no sabrá que la petición procedió originalmente de A. [Wikipedia](https://es.wikipedia.org/wiki/Servidor_proxy).
 Pero probablemente eres muy curioso y ya conoces como trabaja un proxy, normalmente se utiliza como un intermediario entre un equipo o red e Internet. El proxy inverso funciona exactamente al revés, un equipo cualquiera de Internet quiere acceder a un equipo de nuestra red, entonces pasa por este intermediario y deriva la petición en uno o varios servidores de backend.
 
-## Que necesitamos?
+## Empecemos
+### Que necesitamos?
 
 Un equipo CentOS instalado y Apache, si no sabes como instalar Apache puedes verlo en [este post]({% post_url 2019-02-18-Instalando-Apache-CentOS-7 %}).
 
@@ -31,7 +32,7 @@ proxy_module (shared)
 
 2. Ya con el módulo activado lo que debemos hacer es configurar nuestro Virtual Host.
 
-## Configurando Reverse Proxy
+### Configurando Reverse Proxy
 
 1. Creamos el archivo de nuestro Virtual Host.
 ~~~ bash
