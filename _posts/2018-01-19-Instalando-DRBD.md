@@ -8,7 +8,7 @@ aside:
 ---
 
 Bienvenidos aventureros.
-En este post vamos a aprender a instalar DRBD. <!-- more -->.
+En este post vamos a aprender a instalar DRBD. <!--more-->.
 En cada nodo tendremos un disco vacio y completamente dedicado a DRBD, por lo tanto usaremos este disco /dev/vda
 
 ## Que es DRBD (Distributed Replicated Block Device)?
