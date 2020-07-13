@@ -1,8 +1,10 @@
 ---
 title: "Hola Mundo!"
+layout: article
 key: 20180103
 author: Tino
-layout: article
+aside:
+  toc: true
 ---
 
 
