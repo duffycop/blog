@@ -19,7 +19,7 @@ Pero probablemente eres muy curioso y ya conoces como trabaja un proxy, normalme
 
 Un equipo CentOS instalado y Apache, si no sabes como instalar Apache puedes verlo en [este post]({% post_url 2019-02-18-Instalando-Apache-CentOS-7 %}).
 
-## Chequeando mod_proxy
+### Chequeando mod_proxy
 
 1. Lo primero será chequear que mod_proxy esté habilitado y corriendo en Apache, por lo general viene habilitado por defecto.
 ~~~ bash
