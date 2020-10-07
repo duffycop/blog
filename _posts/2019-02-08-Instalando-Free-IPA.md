@@ -7,7 +7,7 @@ aside:
   toc: true
 ---
 
-Hey! Que bueno verte de nuevo! Te hago una pregunta, sabés lo que es un FreeIPA? Si no lo sabés no importa, acá te lo cuento y te digo cómo instalarlo! Mirá.<!--more-->
+Hey! Que bueno verte de nuevo! Te hago una pregunta, sabés lo que es un FreeIPA? Si no lo sabés no importa, en este post vas a aprender qué es y cómo instalar FreeIPA! Mirá.<!--more-->
 
 ## Que es FreeIPA (Free Identity Policy Audit)?
 
