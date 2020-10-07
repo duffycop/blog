@@ -7,7 +7,7 @@ aside:
   toc: true
 ---
 Hey! Me alegra verte de nuevo por aquí!
-Hoy vamos a ver la instalación de Apache Web Server en un CentOS 7.<!--more-->
+Hoy vamos a ver cómo instalar Apache Web Server en un CentOS 7.<!--more-->
 
 ## Que es Apache?
 El servidor HTTP Apache es un servidor web HTTP de código abierto, para plataformas Unix, Microsoft Windows, Macintosh y otras, que implementa el protocolo HTTP/1.1 y la noción de sitio virtual según la normativa RFC 2616. [Wikipedia](https://es.wikipedia.org/wiki/Servidor_HTTP_Apache). 
