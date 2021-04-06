@@ -106,11 +106,14 @@ systemctl start drbd
 systemctl enable drbd
 ~~~
 
-6 - Definamos el Nodo1 como nodo primario:
+6 - Levantamos DRBD en ambos nodos y definimos el Nodo1 como nodo primario:
 ~~~ bash
 drbdadm up drbd0
+~~~
+~~~ bash
 drbdadm primary drbd0
 ~~~
+
 ***Nota***
 >  En caso de tener algún error para definir el nodo como primaro ejecutamos el mismo comando pero con el parámetro --force para forzar esta opcion.
 
@@ -158,12 +161,12 @@ umount /mnt
 
 Cambiamos el Nodo1 de primario a secundario
 ~~~ bash
-drbdadm secondary drbd
+drbdadm secondary drbd0
 ~~~
 
 Ahora cambiamos el Nodo2 de secundario a primario
 ~~~ bash
-drbdadm primary drbd
+drbdadm primary drbd0
 ~~~
 
 Montamos el filesystem y comprobamos que tenga los archivos dentro
