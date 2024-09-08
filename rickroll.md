@@ -1,4 +1,4 @@
 ---
 layout: page
 ---
-<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" allow="autoplay"></iframe>
+<iframe width="500" height="500" src="https://www.youtube.com/embed/DLzxrzFCyOs?hl=en_US&version=3&rel=0&autoplay=1" frameborder="1" allowfullscreen></iframe>
